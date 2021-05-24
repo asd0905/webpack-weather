@@ -10,9 +10,6 @@ export default class App extends Component {
             <div>
                 <SearchBar/>
                 <WeatherList/>
-                <button className="btn pt-22">test</button>
-                <button className="btn-indigo mr-11">test</button>
-                <button className="btn-indigo-2 ml-11">test</button>
             </div>
         )
     }

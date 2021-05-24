@@ -34,15 +34,15 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <form onSubmit={this.onFormSubmit} className="flex justify-center items-stretch mt-3">
+            <form onSubmit={this.onFormSubmit} className="input-group">
                 <input
                     type="text"
                     placeholder="당신이 좋아하는 도시의 5일간의 날씨를 알아보세요"
-                    className="border-2 w-1/2 pl-3 pr-3"
+                    className="form-control"
                     value={this.state.term}
                     onChange={this.onInputChange} />
-                <span className="flex-initial">
-                    <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-3">검색</button>
+                <span className="input-group-btn">
+                    <button type="submit" className="btn btn-secondary">Submit</button>
                 </span>
             </form>
         )
@@ -50,7 +50,7 @@ class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    // 액션 생성자 fetchWeather를 this.props에 넣어주고 이를 실행할 때마다
+    // 액션 생성장 fetchWeather를 this.props에 넣어주고 이를 실행할 때마다
     // dispatch와 함께 액션이 반환된다.
     // dispatch는 급파한다는 의미를 가지고 있듯이 액션을 전체 리듀서에게 보내준다.
     return bindActionCreators({fetchWeather}, dispatch);
