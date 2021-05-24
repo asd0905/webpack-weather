@@ -4,7 +4,7 @@ const {resolve} = require("path");
 module.exports = {
     // __dirnamee은 NodeJS에서 현재 프로젝트 디렉터리를 의미
     // resolve할 파일들의 절대경로
-    context: resolve(__dirname, "../../src"),
+    // context: resolve(__dirname, "../../src"),
     module: {
         rules: [
             {
