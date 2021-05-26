@@ -12,9 +12,10 @@ module.exports = {
             spacing: {
                 '11': '11px',
                 '22': '22px',
+                '4': '15px',
             },
             colors: {
-                gray: color,
+                blue: colors.pink,
                 pink: 'orange',
             },
         },

@@ -10,11 +10,11 @@ module.exports = ((env) => {
         mode: "development",
         entry: ['./index.js'],
         context: resolve(__dirname, '../../' + env.resolveName),
-        output: {
+        /*output: {
             path: __dirname,
             publicPath: '/',
             filename: 'bundle.js'
-        },
+        },*/
         module: {
             rules: [
                 {
@@ -51,7 +51,7 @@ module.exports = ((env) => {
             ],
         },
         devServer: {
-            contentBase: './src',
+            contentBase: './' + env.resolveName + 'index.html',
             port: 8000,
             historyApiFallback: true,
         },

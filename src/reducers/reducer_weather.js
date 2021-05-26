@@ -1,10 +1,7 @@
 import {FETCH_WEATHER} from "../actions";
 
 export default function(prevState = [], action) {
-    if (action.error) {
-        return prevState;
-    }
-
+    console.log('reducer', action);
     switch(action.type) {
         case FETCH_WEATHER:
             // 배열안에 넣은 이유는 차후에 다른 도시의 데이터도 넣어야하기 때문

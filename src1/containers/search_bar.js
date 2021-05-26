@@ -34,15 +34,15 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <form onSubmit={this.onFormSubmit} className="input-group">
+            <form onSubmit={this.onFormSubmit} className="flex justify-center items-stretch mt-3">
                 <input
                     type="text"
                     placeholder="당신이 좋아하는 도시의 5일간의 날씨를 알아보세요"
-                    className="form-control"
+                    className="border-2 w-1/2 pl-3 pr-3"
                     value={this.state.term}
                     onChange={this.onInputChange} />
-                <span className="input-group-btn">
-                    <button type="submit" className="btn btn-secondary">Submit</button>
+                <span className="flex-initial">
+                    <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-3">검색</button>
                 </span>
             </form>
         )

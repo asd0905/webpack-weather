@@ -13,7 +13,7 @@ const purgecss = require('@fullhuman/postcss-purgecss');  // 추가
 module.exports = {
     plugins: [
         require('postcss-import'), // postcss에서 사양할수 있는 기능중 하나 @import 사용가능
-        require('tailwindcss'), // tailwind 추가
+        isProduction ? require('tailwindcss') : false, // tailwind 추가
         isProduction ? purgecss({
             content: ['./src/**/*.{js,jsx,ts,tsx,html}', './src_dist/index.html', './src1/!**/!*.{js,jsx,ts,tsx,html}', './src1_dist/index.html'],
             extractors: [
